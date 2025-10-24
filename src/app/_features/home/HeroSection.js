@@ -1,3 +1,5 @@
+import * as React from "react";
+
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -7,7 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-export default function HeroSection() {
+export function HeroSection() {
   return (
     <Carousel className="w-full max-w-xs">
       <CarouselContent>
