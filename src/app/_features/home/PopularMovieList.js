@@ -56,7 +56,7 @@ export const PopularMovieList = (F) => {
           {popularMoviesData.map((movie, index) => {
             return (
               <MovieCard
-                key={index}
+                key={MovieCard.index}
                 title={movie.title}
                 imageURL={movie.poster_path}
                 rating={movie.vote_average}
