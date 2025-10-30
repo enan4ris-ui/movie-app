@@ -18,21 +18,18 @@ export const MovieList = ({ type }) => {
 
   const getPopularDataList = async () => {
     setLoading(true);
-    const allResults = [];
 
-    for (let page = 1; page <= 3; page++) {
-      const popularEndpoint = `${BASE_URL}/movie/${type}?language=en-US&page=${page}`;
-      const response = await fetch(popularEndpoint, {
-        headers: {
-          Authorization: `Bearer ${ACCESS_TOKEN}`,
-          "Content-Type": "application/json",
-        },
-      });
-      const data = await response.json();
-      allResults.push(...data.results);
-    }
+    const popularEndpoint = `${BASE_URL}/movie/${type}?language=en-US&page=1`;
+    const response = await fetch(popularEndpoint, {
+      headers: {
+        Authorization: `Bearer ${ACCESS_TOKEN}`,
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await response.json();
+    console.log("data", data);
 
-    setPopularMoviesData(allResults);
+    setPopularMoviesData(data.results);
     setLoading(false);
   };
 
@@ -57,7 +54,7 @@ export const MovieList = ({ type }) => {
 
         <button
           onClick={handleSeeMoreButton}
-          className="flex items-center justify-center text-[14px] text-[#09090B] gap-[8px]"
+          className="flex items-center justify-center text-[14px] text-[#09090B] gap-2 cursor-pointer"
         >
           See More
           <ArrowRight className="w-4 h-4" />
@@ -65,7 +62,7 @@ export const MovieList = ({ type }) => {
       </div>
 
       <div className="w-[1277px] h-[910px] overflow-hidden">
-        <div className="grid grid-rows-2 grid-cols-5 gap-[32px] top-[191px] left-[52px]">
+        <div className="grid grid-rows-2 grid-cols-5 gap-8 top-[191px] left-[52px]">
           {popularMoviesData.map((movie, index) => (
             <MovieCard
               key={index}

@@ -44,7 +44,7 @@ export function HeroSection() {
   }
 
   return (
-    <Carousel className="w-full max-w-xs">
+    <Carousel className="w-[1440px] max-w">
       <CarouselContent>
         {nowPlayingDataList.slice(0, 5).map((movie, index) => (
           <CarouselItem key={index}>
@@ -57,12 +57,14 @@ export function HeroSection() {
                   <img src="https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1"></img>
                 </CardContent>{" "} */}
                 <CardContent className="p-0">
-                  <img
-                    src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
-                    alt={movie.title}
-                    className="w-full h-full object-cover"
-                  />{" "}
-                  <span className="text-4xl font-semibold">{movie.title}</span>
+                  <div className="overlap">
+                    <img
+                      src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+                      alt={movie.title}
+                      className="w-[1440px] h-[600px] object-cover"
+                    />{" "}
+                    <h2 className="text-4xl font-semibold">{movie.title}</h2>
+                  </div>
                 </CardContent>
               </Card>
             </div>
