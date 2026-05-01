@@ -171,7 +171,7 @@ function CarouselPrevious({
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft />
+      <ArrowLeft style={{ color: "#09090B" }} />
       <span className="sr-only cursor-pointer">Previous slide</span>
     </Button>
   );
@@ -201,7 +201,7 @@ function CarouselNext({
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight />
+      <ArrowRight style={{ color: "#09090B" }} />
       <span className="sr-only cursor-pointer">Next slide</span>
     </Button>
   );

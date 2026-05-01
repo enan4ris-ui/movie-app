@@ -1,9 +1,9 @@
-import WhiteFilmIcon from "../_features/_icons/WhiteFilmIcon";
-import MailIcon from "@/app/_features/_icons/MailIcon";
-import WifiIcon from "@/app/_features/_icons/WifiIcon";
+import WhiteFilmIcon from "../_icons/WhiteFilmIcon";
+import MailIcon from "@/app/_icons/MailIcon";
+import WifiIcon from "@/app/_icons/WifiIcon";
 export function Footer() {
   return (
-    <div className="w-[1440px] h-[280px] flex justify-center gap-[120px] bg-indigo-700 pt-10 ">
+    <div className="flex h-[280px] w-full justify-center gap-[120px] bg-indigo-700 pt-10">
       <div className="w-[247px] h-[200px] gap-10 grid-auto-flow">
         {" "}
         <WhiteFilmIcon />{" "}

@@ -1,6 +1,72 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+:root {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background: #09090b;
+  color: #fafafa;
+}
+
+html.dark [class*="bg-white"],
+html.dark [class*="bg-[#FFFFFF]"] {
+  background-color: #09090b !important;
+}
+
+html.dark [class*="bg-[#F4F4F5]"] {
+  background-color: #18181b !important;
+}
+
+html.dark [class*="text-[#09090B]"],
+html.dark [class*="text-zinc-950"],
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark p,
+html.dark span {
+  color: #fafafa;
+}
+
+html.dark [class*="text-[#71717A]"] {
+  color: #a1a1aa;
+}
+
+html.dark [class*="border-[#E4E4E7]"],
+html.dark [class*="border-gray-200"] {
+  border-color: #3f3f46 !important;
+}
+
+html.dark input,
+html.dark [role="menu"],
+html.dark [data-slot="dropdown-menu-content"] {
+  background-color: #09090b !important;
+  border-color: #3f3f46 !important;
+  color: #fafafa !important;
+}
+
+html.dark input::placeholder {
+  color: #a1a1aa;
+}
+
+html.dark .genre-chip {
+  background-color: #18181b !important;
+  border-color: #e4e4e7 !important;
+  color: #fafafa !important;
+}
+
+html.dark .genre-chip[style*="background-color: rgb(9, 9, 11)"],
+html.dark .genre-chip[style*="background-color: #09090B"] {
+  background-color: #fafafa !important;
+  border-color: #fafafa !important;
+  color: #09090b !important;
+}
+
 /* @custom-variant dark (&:is(.dark *));
 
 @theme inline {

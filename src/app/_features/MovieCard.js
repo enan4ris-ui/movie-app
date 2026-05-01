@@ -1,4 +1,4 @@
-const { StarIcon } = require("../_features/_icons/StarIcon");
+import { StarIcon } from "../_icons/StarIcon";
 
 export function MovieCard(props) {
   const { title, imageURL, rating } = props;

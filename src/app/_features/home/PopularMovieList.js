@@ -3,7 +3,7 @@
 import { LoadingMovieList } from "./LoadingMovieList";
 import { useEffect, useState } from "react";
 
-import { ArrowRight } from "../_icons/ArrowRight";
+import { ArrowRight } from "@/app/_icons/ArrowRight";
 import { MovieCard } from "@/app/_components/MovieCard";
 
 const BASE_URL = "https://api.themoviedb.org/3";

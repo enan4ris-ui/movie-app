@@ -1,7 +1,7 @@
 // import * as React from "react";
 "use client";
 import { MovieCard } from "@/app/_components/MovieCard";
-import { ArrowRight } from "@/app/_features/_icons/ArrowRight";
+import { ArrowRight } from "@/app/_icons/ArrowRight";
 import { useState, useEffect } from "react";
 const BASE_URL = "https://api.themoviedb.org/3";
 
@@ -54,8 +54,9 @@ export const UpcomingMovieList = () => {
         {movieData.map((movie, index) => {
           return (
             <MovieCard
+              key={movie.id ?? index}
               title={movie.title}
-              imageUrl={movie.backdrop_path}
+              imageURL={movie.poster_path}
               rating={movie.vote_average}
             />
           );

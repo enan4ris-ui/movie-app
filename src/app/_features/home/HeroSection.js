@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { WatchTrailerIcon } from "../_icons/WatchTrailerIcon";
-import { StarIcon } from "@/app/_features/_icons/StarIcon";
+import { WatchTrailerIcon } from "@/app/_icons/WatchTrailerIcon";
+import { StarIcon } from "@/app/_icons/StarIcon";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Dialog,

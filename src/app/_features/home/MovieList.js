@@ -1,10 +1,10 @@
 "use client";
 
-import { StarIcon } from "../_icons/StarIcon";
+import { StarIcon } from "@/app/_icons/StarIcon";
 import { LoadingMovieList } from "./LoadingMovieList";
 import { useEffect, useState } from "react";
 import { MovieCard } from "../../_components/MovieCard";
-import { ArrowRight } from "../_icons/ArrowRight";
+import { ArrowRight } from "@/app/_icons/ArrowRight";
 import { useRouter } from "next/navigation";
 const BASE_URL = "https://api.themoviedb.org/3";
 const ACCESS_TOKEN =
